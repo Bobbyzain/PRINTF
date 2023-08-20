@@ -8,5 +8,7 @@
 #include <string.h>
 
 int _printf(const char *format, ...);
+int strings(int written, va_list ap);
+int _printf_formats1(const char *cc, int written, va_list ap);
 
 #endif 
