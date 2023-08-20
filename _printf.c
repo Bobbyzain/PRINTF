@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	int written = 0;
-	const char *c;
+	const char *c = format;
 
 
 	va_start(ap, format);
@@ -31,6 +31,17 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			if (*c == 'd' || *c == 'i' || *c == 'f')
+			{
+				c--;
+				if (*c == '+' || *c == ' ')
+				{
+					c--;
+					c += (*c == '%') ? 3 : 2;
+				}
+				else
+					c++;
+			}
 			write(1, c, 1);	/* this is a regular character */
 			written++;
 		}
