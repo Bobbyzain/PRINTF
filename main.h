@@ -16,5 +16,10 @@ int *signed_num_size_gen(int num, int i);
 int signed_int_spec(int written, va_list ap);
 int pointer_writer(void *ptr);
 int address_print(int written, va_list ap);
+int uns_spec(int written, va_list ap);
+char *dec_to_oct(unsigned int bin);
+int uns_integer_counter(unsigned int num);
+char *uns_int_to_str(unsigned int num);
+int uns_int_spec(int written, va_list ap);
 
 #endif 
