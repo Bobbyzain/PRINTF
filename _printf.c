@@ -50,3 +50,26 @@ int _printf(const char *format, ...)
 	return (written);
 }
 
+<<<<<<< HEAD
+=======
+	if (*c == 'c')
+	{
+		chc = va_arg(ap, int);	/* to handle the 'c' format */
+		written += write(1, &chc, 1);
+	}
+	else if (*c == 's')
+		written = strings(written, ap);	/* to handle string printing */
+	else if (*c == '+')
+	{
+		c++;
+		if (*c == 'd' || *c == 'i' || *c == 'f')
+			written = signed_int_spec(written, ap);	/* handle signs when printing numbers*/
+		else
+		{
+			c--;
+			write(1, c, 1);
+		}
+	}
+	return (written);
+}
+>>>>>>> 549e711b6c8fa119c8ec839bc0bad76b470edfed
