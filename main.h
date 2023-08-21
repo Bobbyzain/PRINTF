@@ -15,5 +15,6 @@ char *signed_int_to_str(int num);
 int *signed_num_size_gen(int num, int i);
 int signed_int_spec(int written, va_list ap);
 int pointer_writer(void *ptr);
+int address_print(int written, va_list ap);
 
 #endif 
