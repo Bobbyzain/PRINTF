@@ -69,5 +69,16 @@ int _printf_formats1(const char *cc, int written, va_list ap)
 	}
 	else if (*c == 's')
 		written = strings(written, ap);	/* to handle string printing */
+	else if (*c == '+')
+	{
+		c++;
+		if (*c == 'd' || *c == 'i' || *c == 'f')
+			written = signed_int_spec(written, ap);	/* handle signs when printing numbers*/
+		else
+		{
+			c--;
+			write(1, c, 1);
+		}
+	}
 	return (written);
 }
