@@ -3,7 +3,7 @@
 /**
  * _printf -  produces output according to a format
  * @format: string containing directives
- * return: always integer
+ * Return: always integer
  */
 
 int _printf(const char *format, ...)
@@ -27,7 +27,11 @@ int _printf(const char *format, ...)
 				written++;
 			}
 			else
+<<<<<<< HEAD
 				written == _printf_formats1(c, written, ap); /* to handle format specifier */
+=======
+				written = _printf_formats1(c, written, ap); /* to handle format specifier*/
+>>>>>>> a663f1eff0422e381506b49846bb5432e2fd70c4
 		}
 		else
 		{
