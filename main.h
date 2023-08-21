@@ -21,5 +21,7 @@ char *dec_to_oct(unsigned int bin);
 int uns_integer_counter(unsigned int num);
 char *uns_int_to_str(unsigned int num);
 int uns_int_spec(int written, va_list ap);
+char *dec_to_bin(unsigned int bin);
+void reverse_string(char *str, int length);
 
 #endif 

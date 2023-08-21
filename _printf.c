@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 				written++;
 			}
 			else
-				written == _printf_formats1(c, written, ap); /* to handle format specifier */
+				written = _printf_formats1(c, written, ap); /* to handle format specifier */
 		}
 		else
 		{

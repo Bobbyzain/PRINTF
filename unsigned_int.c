@@ -76,7 +76,7 @@ char *uns_int_to_str(unsigned int num)
 int uns_int_spec(int written, va_list ap)
 {
 	int len, num = va_arg(ap, int);
-	char *buffer = int_to_str(num);
+	char *buffer = uns_int_to_str(num);
 
 	if (buffer == NULL)
 		return (written);
