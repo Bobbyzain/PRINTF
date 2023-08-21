@@ -10,5 +10,7 @@
 int _printf(const char *format, ...);
 int strings(int written, va_list ap);
 int _printf_formats1(const char *cc, int written, va_list ap);
+int address_print(int written, va_list ap);
+int pointer_writer(void *ptr);
 
 #endif 
