@@ -49,26 +49,3 @@ int _printf(const char *format, ...)
 	va_end(ap);
 	return (written);
 }
-/**
- * _printf_formats1 - To continue from the main function
- * @cc: expected formatting
- * @written: variable counting the number of arguments
- * @ap: argument parameter
- * Return: Always 0
- */
-
-int _printf_formats1(const char *cc, int written, va_list ap)
-{
-	const char *c = cc;
-	char chc;
-
-	if (*c == 'c')
-	{
-		chc = va_arg(ap, int);	/* to handle the 'c' format */
-		written += write(1, &chc, 1);
-	}
-	else if (*c == 's')
-		written = strings(written, ap);	/* to handle string printing */
-	else if (*c == 'd' || *c == 'i' || *c == 'f')
-	return (written);
-}
