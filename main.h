@@ -32,5 +32,6 @@ int low_hex_conv(int written, va_list ap);
 char *dec_to_low_hex(unsigned int hex);
 int oct_convert(int written, va_list ap);
 int _printf_formats2(const char *ccc, int written, va_list ap);
+int bin_convert(int written, va_list ap);
 
 #endif 
