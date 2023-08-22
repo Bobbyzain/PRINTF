@@ -37,5 +37,7 @@ int space_integer_counter(int num);
 char *space_int_to_str(int num);
 int *space_num_size_gen(int num, int i);
 int space_int_spec(int written, va_list ap);
+int _strlen(const char *str);
+char *rev_str(char *str);
 
 #endif 
