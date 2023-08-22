@@ -60,7 +60,7 @@ char *signed_int_to_str(int num)
 	x = signed_num_size_gen(num, i);
 	num = x[0];
 	i = x[1];
-	while(num != 0)
+	while (num != 0)
 	{
 		dig = num % 10;
 		buffer[i] = '0' + dig;
