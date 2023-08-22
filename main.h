@@ -39,5 +39,6 @@ int *space_num_size_gen(int num, int i);
 int space_int_spec(int written, va_list ap);
 int _strlen(const char *str);
 char *rev_str(char *str);
+int rev_strings(int written, va_list ap);
 
 #endif 
