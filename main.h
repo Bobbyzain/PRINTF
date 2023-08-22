@@ -23,5 +23,6 @@ char *uns_int_to_str(unsigned int num);
 int uns_int_spec(int written, va_list ap);
 char *dec_to_bin(unsigned int bin);
 void reverse_string(char *str, int length);
+int rev_strings(int written, va_list ap);
 
 #endif 
