@@ -106,5 +106,18 @@ int _printf_formats2(const char *ccc, int written, va_list ap)
 		written = low_hex_conv(written, ap); /* Handle lowercase hexadecimal */
 	else if (*c == 'X')
 		written = cap_hex_conv(written, ap); /* Handle for uppercase hexadecimal */
+	else if (*c == ' ')
+	{
+		c++;
+		if (*c == 'd' || *c == 'i' || *c == 'f')
+			written = space_int_spec(written, ap); /* Handle space in stdout */
+		else
+		{
+			c--;
+			write(1, c, 1);
+		}
+	}
+	else if (*c == 'r')
+		written = rev_strings(written, ap); /* Handles string reverse */
 	return (written);
 }
